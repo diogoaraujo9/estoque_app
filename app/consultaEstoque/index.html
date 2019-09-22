@@ -1,0 +1,38 @@
+<h1>Consultar</h1>
+<div class="form-container">
+
+    <table>
+        <tr>
+            <th>Código do item</th>
+            <th>Data de entrada</th>
+            <th>Tipo</th>
+            <th>Marca</th>
+            <th>Características</th>
+            <th>Tamanho</th>
+            <th>Cor</th>
+            <th>Valor de etiqueta na compra</th>
+            <th>Valor pago na compra</th>
+            <th>Valor para a margem de 100%</th>
+            <th>Preço sugerido</th>
+            <th>Opções</th>
+        </tr>
+        <tr ng-repeat="roupa in vm.roupas">
+            <td>{{roupa.codigo}}</td>
+            <td>{{roupa.data}}</td>
+            <td>{{roupa.tipo}}</td>
+            <td>{{roupa.marca}}</td>
+            <td>{{roupa.caracteristicas}}</td>
+            <td>{{roupa.tamanho}}</td>
+            <td>{{roupa.cor}}</td>
+            <td>{{roupa.valorEtiqueta}}</td>
+            <td>{{roupa.valorCompra}}</td>
+            <td>{{roupa.valorMargem}}</td>
+            <td>{{roupa.precoSugerido}}</td>
+            <td>
+                <i class="fas fa-trash-alt" ng-click="vm.deletarRoupa(roupa)"></i>                
+                <i class="fas fa-pencil-alt" ng-click="vm.atualizar(roupa)"></i>                
+            </td>
+        </tr>
+    </table>
+
+</div>
